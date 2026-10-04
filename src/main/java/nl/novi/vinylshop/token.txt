@@ -1,0 +1,47 @@
+https://www.jwt.io/
+
+eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfbWhXTzNWb2FDYUZTNmhQZDJjLWZhaUlvVUU4d2dfUktKTmg4YlAwTU5jIn0.eyJleHAiOjE3OTExNDMzMDUsImlhdCI6MTc5MTE0MDMwNSwiYXV0aF90aW1lIjoxNzkxMTQwMjQ1LCJqdGkiOiJvbnJ0YWM6NDY1NjE5ZDItNmUwZi0wZjg5LTE1ZjAtMmU0NzhiM2RiNmE2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL3JlYWxtcy92aW55bHNob3AiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiM2I4ZjE5YjktOWMzZi00OTg0LTk2ZTktNWJiYjUwNzRiMWZlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidmlueWxzaG9wYmFja2VuZCIsInNpZCI6IjY1X2hkYmtkLV9kTVJrMkNMWXZEX05JZSIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJkZWZhdWx0LXJvbGVzLXZpbnlsc2hvcCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InZpbnlsc2hvcGJhY2tlbmQiOnsicm9sZXMiOlsiUk9MRV9BRE1JTiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoibm92aSBub3ZpIiwicHJlZmVycmVkX3VzZXJuYW1lIjoibm92aSIsImdpdmVuX25hbWUiOiJub3ZpIiwiZmFtaWx5X25hbWUiOiJub3ZpIiwiZW1haWwiOiJub3ZpQHZpbnlsc2hvcC5ubCJ9.XpyqkFy-s3t2wOG55pizxOxdO2R6Aa_3Yjbp90oALlVMn754bnY6jPBkin02_nJ855GXskuZ2Wi7hH0DMEtMWWGpjC3Cv5ZSh7yhraAWDvVqdcbIIBK8FUoEsfwbph6_g3pfdATdam-ORBNGRo1TAhTSA7-1vqr1-R7fuvpDZKDvKDBHdu_7QE2R35zbyzoiwjryIPpoZZR6HVvPhYdFlrGD53P5M05ncaRHhL2x71wOtDj45Tjfy6slGzeSeIyGZPtajibK6qjfrT8GTmFbr_ezC2dKMLK9UwOn_xUxfB57a0EOfQbPDPpaCgMe5WBd7G-nQWFy1XiOK-at8yLrzA
+{
+  "exp": 1791143305,
+  "iat": 1791140305,
+  "auth_time": 1791140245,
+  "jti": "onrtac:465619d2-6e0f-0f89-15f0-2e478b3db6a6",
+  "iss": "http://localhost:9090/realms/vinylshop",
+  "aud": "account",
+  "sub": "3b8f19b9-9c3f-4984-96e9-5bbb5074b1fe",
+  "typ": "Bearer",
+  "azp": "vinylshopbackend",
+  "sid": "65_hdbkd-_dMRk2CLYvD_NIe",
+  "acr": "0",
+  "allowed-origins": [
+    "/*"
+  ],
+  "realm_access": {
+    "roles": [
+      "offline_access",
+      "uma_authorization",
+      "default-roles-vinylshop"
+    ]
+  },
+  "resource_access": {
+    "vinylshopbackend": {
+      "roles": [
+        "ROLE_ADMIN"
+      ]
+    },
+    "account": {
+      "roles": [
+        "manage-account",
+        "manage-account-links",
+        "view-profile"
+      ]
+    }
+  },
+  "scope": "email profile",
+  "email_verified": false,
+  "name": "novi novi",
+  "preferred_username": "novi",
+  "given_name": "novi",
+  "family_name": "novi",
+  "email": "novi@vinylshop.nl"
+}
