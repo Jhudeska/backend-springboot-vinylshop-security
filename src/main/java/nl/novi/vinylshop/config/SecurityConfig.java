@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.GrantedAuthority;
@@ -44,7 +45,14 @@ public class SecurityConfig {
                     ))
             .authorizeHttpRequests(authorize -> authorize
                     .requestMatchers("/login").hasRole("USER")
-                    .anyRequest().authenticated()
+                    .requestMatchers(HttpMethod.GET, "/albums", "/albums/**").permitAll()
+                    .requestMatchers("/albums/{albumId}/stock").hasAuthority("ADMIN")
+                    .requestMatchers("/profiles/albums").hasAuthority("USER")
+                    .requestMatchers("/profiles").authenticated()
+                    .requestMatchers(HttpMethod.POST).hasAuthority("ADMIN")
+                    .requestMatchers(HttpMethod.PUT).hasAuthority("ADMIN")
+                    .requestMatchers(HttpMethod.DELETE).hasAuthority("ADMIN")
+                    .anyRequest().denyAll()
             )
             .sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .build();
