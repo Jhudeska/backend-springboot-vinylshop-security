@@ -1,11 +1,13 @@
 package nl.novi.vinylshop.entities;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class ProfileEntity extends BaseEntity {
 
     @Column(unique = true, nullable = false)

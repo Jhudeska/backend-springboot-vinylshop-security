@@ -24,7 +24,10 @@ public class ProfileDTOMapper {
         return dto;
     }
 
-    public List<ProfileResponseDTO> toDto(List<ProfileEntity> entity){
-        return entity.stream().map(this::toDto).toList();
+    public List<ProfileResponseDTO> toDto(List<ProfileEntity> entities) {
+        return entities.stream()
+                .map(profile -> (ProfileResponseDTO) toDto((List<ProfileEntity>) profile))
+                .toList();
     }
+
 }
